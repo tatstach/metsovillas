@@ -115,6 +115,17 @@
   .amenities-grid{ margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; }
   .amenity{ display:flex; gap:12px; align-items:flex-start; font-size:0.98rem; line-height:1.5; }
   .amenity svg{ flex:none; margin-top:3px; color:var(--gold); }
+
+  /* ---------- Good to know (policy bubbles) ---------- */
+  .policy-band{ padding:clamp(56px,8vw,88px) 0; }
+  .policy-band .wrap{ text-align:center; }
+  .policy-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:32px; }
+  .policy-pill{ display:inline-flex; align-items:center; gap:10px; padding:14px 26px; border-radius:999px; background:var(--paper); font-size:0.92rem; letter-spacing:0.01em; color:var(--ink); }
+  .policy-pill svg{ flex:none; color:var(--gold); }
+  @media (max-width:640px){
+    .policy-row{ gap:10px; }
+    .policy-pill{ padding:11px 18px; font-size:0.84rem; }
+  }
   @media (max-width:640px){ .amenities-grid{ grid-template-columns:1fr; } }
 
   /* ---------- Courtyard panel (lighter) ---------- */
@@ -360,6 +371,17 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="policy-band">
+  <div class="wrap">
+    <div class="eyebrow-row center reveal"><span class="eb-mark"><span class="eb-line"></span><span class="eb-chip"></span></span><span class="eyebrow">Good to Know</span></div>
+    <div class="policy-row reveal">
+      <span class="policy-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Check-in from 15:00</span>
+      <span class="policy-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Check-out until 11:00</span>
+      <span class="policy-pill"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4.5 20c0-3.5 3-6 7.5-6s7.5 2.5 7.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="7" cy="7.5" r="1.7" stroke="currentColor" stroke-width="1.4"/><circle cx="12.5" cy="5.5" r="1.7" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="8" r="1.7" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 21.5l19-19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Pets are not allowed</span>
+    </div>
   </div>
 </section>
 
