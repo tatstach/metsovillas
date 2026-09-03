@@ -102,8 +102,20 @@
   .burger{ display:flex; flex-direction:column; gap:8px; width:30px; cursor:pointer; background:none; border:none; padding:0; }
   .burger span{ height:1px; background:var(--paper); display:block; transition:background .3s ease; }
   .burger span:last-child{ width:60%; }
-  .header-actions{ display:flex; gap:12px; }
+  .header-actions{ display:flex; align-items:center; gap:12px; }
   @media (max-width:640px){ .header-actions .btn{ padding:0.8em 1.3em; font-size:0.72rem; } }
+
+  /* ---------- Language switch ---------- */
+  .lang-switch{ position:relative; }
+  .lang-btn{ display:flex; align-items:center; gap:6px; background:none; border:none; cursor:pointer; padding:0.5em 0.2em; font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--paper); transition:color .3s ease; }
+  header.scrolled .lang-btn{ color:var(--ink); }
+  .lang-caret{ transition:transform .2s ease; flex:none; }
+  .lang-switch.open .lang-caret{ transform:rotate(180deg); }
+  .lang-menu{ position:absolute; top:100%; left:50%; transform:translateX(-50%); margin-top:10px; opacity:0; pointer-events:none; transition:opacity .2s ease; }
+  .lang-switch.open .lang-menu{ opacity:1; pointer-events:auto; }
+  .lang-option{ display:block; background:var(--forest-900); color:var(--paper); text-decoration:none; font-family:'Jost',sans-serif; font-size:0.85rem; letter-spacing:0.04em; padding:0.6em 1.4em; border-radius:4px; white-space:nowrap; text-align:center; }
+  .lang-option:hover{ background:var(--forest-700); }
+  @media (max-width:640px){ .lang-btn{ font-size:0.92rem; } }
 
   /* ---------- Hero ---------- */
   .hero{ position:relative; min-height:96vh; display:flex; align-items:flex-end; color:var(--paper); overflow:hidden; background:var(--forest-900); }
@@ -378,6 +390,13 @@
     <button class="burger" aria-label="Open menu"><span></span><span></span></button>
     <div></div>
     <div class="header-actions">
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          En
+          <svg class="lang-caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-menu"><a class="lang-option" href="el/index.html">El</a></div>
+      </div>
       <a class="btn btn-line-light" href="tel:+306946905096">Book Now</a>
     </div>
   </div>
@@ -693,6 +712,18 @@
   menuCloseBtn.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
   mobileMenu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){ mobileMenu.classList.remove('open'); });
+  });
+
+  var langSwitch = document.getElementById('langSwitch');
+  var langBtn = document.getElementById('langBtn');
+  langBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var isOpen = langSwitch.classList.toggle('open');
+    langBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', function(){
+    langSwitch.classList.remove('open');
+    langBtn.setAttribute('aria-expanded', 'false');
   });
 
   var wbdBg = document.getElementById('wbdBg');
