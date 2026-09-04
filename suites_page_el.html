@@ -76,7 +76,7 @@
   .page-band-bg{ position:absolute; inset:0; background-image:var(--band-photo); background-size:cover; background-position:center; }
   .page-band-fade{ position:absolute; left:0; right:0; bottom:0; height:18%; background:linear-gradient(180deg, rgba(238,231,218,0) 0%, rgba(238,231,218,0.5) 60%, var(--cream) 100%); }
   .page-band .wrap{ position:relative; z-index:1; text-align:center; }
-  .page-band h1{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:400; font-size:clamp(2.2rem,4.2vw,3.4rem); color:#fff; letter-spacing:0.01em; filter:drop-shadow(0 4px 16px rgba(0,0,0,0.55)); }
+  .page-band h1{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:400; font-size:clamp(1.9rem,3.4vw,2.7rem); color:#fff; letter-spacing:0.01em; filter:drop-shadow(0 4px 16px rgba(0,0,0,0.55)); }
 
   /* ---------- Tabs ---------- */
   .suite-tabs{ display:flex; justify-content:center; gap:clamp(18px,4vw,48px); flex-wrap:wrap; border-bottom:1px solid var(--rule); margin-bottom:clamp(48px,7vw,72px); }
@@ -121,8 +121,8 @@
 
   /* ---------- Amenities band ---------- */
   .amenities-band{ padding:clamp(56px,8vw,88px) 0 0; margin-top:clamp(56px,8vw,88px); border-top:1px solid var(--rule); }
-  .amenities-grid{ margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; }
-  .amenity{ display:flex; gap:12px; align-items:flex-start; font-size:0.98rem; line-height:1.5; }
+  .amenities-grid{ margin-top:36px; columns:2; column-gap:40px; }
+  .amenity{ display:flex; gap:12px; align-items:flex-start; font-size:0.98rem; line-height:1.5; margin-bottom:16px; break-inside:avoid; }
   .amenity svg{ flex:none; margin-top:3px; color:var(--gold); }
 
   /* ---------- Good to know (policy bubbles) ---------- */
@@ -135,7 +135,7 @@
     .policy-row{ gap:10px; }
     .policy-pill{ padding:11px 18px; font-size:0.84rem; }
   }
-  @media (max-width:640px){ .amenities-grid{ grid-template-columns:1fr; } }
+  @media (max-width:640px){ .amenities-grid{ columns:1; } }
 
   /* ---------- Courtyard panel (lighter) ---------- */
   .courtyard-features{ margin-top:26px; display:flex; flex-direction:column; gap:10px; }
@@ -241,7 +241,7 @@
         <div class="split-copy reveal reveal-delay-1">
           <span class="suite-num">01</span>
           <h2>Úna</h2>
-          <div class="suite-stats">60 τ.μ. / Έως 4 άτομα / Θέα κήπο και βουνό</div>
+          <div class="suite-stats">60 τ.μ. / Έως 4 άτομα / Θέα σε κήπο και βουνό</div>
           <p>Ένα πλήρες ιδιωτικό διαμέρισμα με δική του κουζίνα και βεράντα, με θέα κήπο και βουνό, στην καρδιά του Μετσόβου.</p>
           <a class="btn btn-gold" href="tel:+306946905096">ΚΡΑΤΗΣΗ ΤΩΡΑ</a>
         </div>
@@ -254,7 +254,7 @@
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ιδιωτικό μπάνιο με μπανιέρα ή ντουζιέρα</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Θέα σε κήπο και βουνό</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Κλιματισμός και θέρμανση</span></div>
-            <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Εσωτερικό αίθριο</span></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Εσωτερική αυλή</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Τηλεόραση επίπεδης οθόνης με δορυφορικά κανάλια</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ιδιωτική βεράντα</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Δωρεάν WiFi</span></div>
@@ -283,7 +283,7 @@
         <div class="split-copy reveal reveal-delay-1">
           <span class="suite-num">02</span>
           <h2>Duáo</h2>
-          <div class="suite-stats">60 τ.μ. / Έως 5 άτομα / Θέα κήπο και βουνό</div>
+          <div class="suite-stats">60 τ.μ. / Έως 5 άτομα / Θέα σε κήπο και βουνό</div>
           <p>Δύο υπνοδωμάτια και ιδιωτικό μπαλκόνι με θέα στον κήπο και τα βουνά, ένα ήσυχο, ηχομονωμένο καταφύγιο για οικογένεια ή φίλους.</p>
           <a class="btn btn-gold" href="tel:+306946905096">ΚΡΑΤΗΣΗ ΤΩΡΑ</a>
         </div>
@@ -296,7 +296,7 @@
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ιδιωτικό μπάνιο με μπανιέρα ή ντουζιέρα</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Θέα σε κήπο και βουνό</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Κλιματισμός και θέρμανση</span></div>
-            <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Εσωτερικό αίθριο</span></div>
+            <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Εσωτερική αυλή</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ηχομονωμένοι τοίχοι</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Τηλεόραση επίπεδης οθόνης με δορυφορικά κανάλια</span></div>
             <div class="amenity"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ιδιωτικό μπαλκόνι και βεράντα</span></div>
@@ -325,7 +325,7 @@
         <div class="split-copy reveal reveal-delay-1">
           <span class="suite-num">03</span>
           <h2>Tréi</h2>
-          <div class="suite-stats">24 τ.μ. / Έως 2 άτομα / Θέα βουνό</div>
+          <div class="suite-stats">24 τ.μ. / Έως 2 άτομα / Θέα στο βουνό</div>
           <p>Η μικρότερη και πιο ζεστή μας σουίτα, ένα οικείο δίκλινο δωμάτιο με ιδιωτική κουζινούλα και μπαλκόνι με θέα στην Πίνδο. Ιδανική για δύο.</p>
           <a class="btn btn-gold" href="tel:+306946905096">ΚΡΑΤΗΣΗ ΤΩΡΑ</a>
         </div>
@@ -363,7 +363,7 @@
         <div class="split-copy reveal reveal-delay-1">
           <span class="suite-num">04</span>
           <h2>Pátru</h2>
-          <div class="suite-stats">28 τ.μ. / Έως 4 άτομα (2 ενήλικες + 2 παιδιά) / Θέα κήπο και βουνό</div>
+          <div class="suite-stats">28 τ.μ. / Έως 4 άτομα (2 ενήλικες + 2 παιδιά) / Θέα σε κήπο και βουνό</div>
           <p>Δύο μονά κρεβάτια και ιδιωτική κουζινούλα κάνουν το Pátru την πιο ευέλικτη σουίτα μας, ιδανική για οικογένειες ή παρέες φίλων.</p>
           <a class="btn btn-gold" href="tel:+306946905096">ΚΡΑΤΗΣΗ ΤΩΡΑ</a>
         </div>

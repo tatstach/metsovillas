@@ -121,8 +121,8 @@
 
   /* ---------- Amenities band ---------- */
   .amenities-band{ padding:clamp(56px,8vw,88px) 0 0; margin-top:clamp(56px,8vw,88px); border-top:1px solid var(--rule); }
-  .amenities-grid{ margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:16px 40px; }
-  .amenity{ display:flex; gap:12px; align-items:flex-start; font-size:0.98rem; line-height:1.5; }
+  .amenities-grid{ margin-top:36px; columns:2; column-gap:40px; }
+  .amenity{ display:flex; gap:12px; align-items:flex-start; font-size:0.98rem; line-height:1.5; margin-bottom:16px; break-inside:avoid; }
   .amenity svg{ flex:none; margin-top:3px; color:var(--gold); }
 
   /* ---------- Good to know (policy bubbles) ---------- */
@@ -135,7 +135,7 @@
     .policy-row{ gap:10px; }
     .policy-pill{ padding:11px 18px; font-size:0.84rem; }
   }
-  @media (max-width:640px){ .amenities-grid{ grid-template-columns:1fr; } }
+  @media (max-width:640px){ .amenities-grid{ columns:1; } }
 
   /* ---------- Courtyard panel (lighter) ---------- */
   .courtyard-features{ margin-top:26px; display:flex; flex-direction:column; gap:10px; }
