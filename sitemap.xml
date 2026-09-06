@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://metsovillas.gr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://metsovillas.gr/el/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://metsovillas.gr/suites.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/suites.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/suites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/suites.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://metsovillas.gr/el/suites.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/suites.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/suites.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/suites.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://metsovillas.gr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/contact.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://metsovillas.gr/el/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/contact.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://metsovillas.gr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://metsovillas.gr/el/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metsovillas.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://metsovillas.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://metsovillas.gr/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
