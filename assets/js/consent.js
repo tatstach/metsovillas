@@ -1,8 +1,7 @@
 (function(window, document){
   'use strict';
 
-  // TODO: replace with the real GA4 Measurement ID (Google Analytics > Admin > Data Streams).
-  var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+  var GA_MEASUREMENT_ID = 'G-5Z6539DCMF';
 
   var STORAGE_KEY = 'mv_consent';
 
