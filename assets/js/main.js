@@ -3,6 +3,17 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // A plain #top anchor link can't scroll the page when the element with
+  // id="top" is position:fixed (the header on Suites/Contact/Privacy) —
+  // a fixed element is always "in view", so the browser has nothing to
+  // scroll to. Intercept every such link site-wide and scroll to 0 instead.
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href="#top"]');
+    if (!a) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+
   function initReveal(){
     var reveals = document.querySelectorAll('.reveal');
     if (!reveals.length) return;
