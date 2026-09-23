@@ -111,6 +111,18 @@ both** — push to the working branch, then
 - Verify `https://www.metsovillas.gr` serves without a certificate warning
   (the `www` CNAME was only just pointed at `tatstach.github.io`; GitHub's
   automatic HTTPS cert for it takes some time to issue after a DNS change).
-- No formal design-agency/legal business name was given for the Privacy
-  Policy's "data controller" — it currently just says "MetsoVillas". Ask
-  if she wants a formal legal name/ΑΦΜ added.
+
+## Other real facts learned since the initial build
+
+- MetsoVillas is a sole proprietorship (ατομική επιχείρηση) legally under
+  **Nikos Stachoulis** (Tatiana's father) — this is named in the Privacy
+  Policy's "Who we are" section (EN + EL) as the data controller. No ΑΦΜ
+  was given; she chose to leave it out.
+- She has expressed interest in adding a third-party **booking engine**
+  (research done: WebHotelier/reserve-online.net — Greek company, per
+  reservation pricing €5-8.50 or 3% flat, explicitly serves small
+  "independent hotels and villas"; Little Hotelier and Sirvoy also
+  discussed as alternatives). This would be a real change to the
+  long-standing "no booking engine" rule above — don't add one without
+  her explicit go-ahead in a given session, and update this file's hard
+  rule if/when she confirms she wants to proceed.
