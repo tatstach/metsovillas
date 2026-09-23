@@ -21,20 +21,41 @@
     }
   };
 
-  function loadGA(){
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  // Google Consent Mode v2: declare a default (denied) consent state before
+  // gtag.js loads, so Google can still send cookieless, non-identifying
+  // pings for statistical modeling when a visitor has not granted consent.
+  // No cookies are set and no personal data is stored under this default.
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+
+  function loadGtagJs(){
     if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXXX') !== -1) return;
-    if (window.__gaLoaded) return;
-    window.__gaLoaded = true;
+    if (window.__gtagJsLoaded) return;
+    window.__gtagJsLoaded = true;
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
     document.head.appendChild(script);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ window.dataLayer.push(arguments); }
-    window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
   }
+
+  function grantAnalyticsConsent(){
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
+
+  // gtag.js itself carries no tracking cookies until consent is granted;
+  // Consent Mode is what lets it send the denied-state signal Google needs
+  // for modeling, so it loads on every visit regardless of the banner choice.
+  loadGtagJs();
 
   function loadMetaPixel(){
     if (!META_PIXEL_ID || META_PIXEL_ID.indexOf('XXXX') !== -1) return;
@@ -51,7 +72,7 @@
   }
 
   function loadTrackers(){
-    loadGA();
+    grantAnalyticsConsent();
     loadMetaPixel();
   }
 
