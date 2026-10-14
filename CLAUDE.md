@@ -114,11 +114,16 @@ Footer `.wrap` and `#mobileMenu` carry `data-nosnippet` so Google doesn't
 build search snippets out of nav labels and contact details. Keep it on
 any new page.
 
+Removing/re-adding the custom domain in GitHub Settings → Pages (done once
+in Oct 2026 to fix a stuck "DNS Check in Progress" that left the site on
+plain HTTP) makes GitHub commit `Delete CNAME`/`Create CNAME` directly to
+`main`. Fetch and fast-forward the working branch before pushing again.
+"Enforce HTTPS" is now on.
+
 ## Pending / not yet done
 
-- Verify `https://www.metsovillas.gr` serves without a certificate warning
-  (the `www` CNAME was only just pointed at `tatstach.github.io`; GitHub's
-  automatic HTTPS cert for it takes some time to issue after a DNS change).
+- Confirm `https://www.metsovillas.gr` also opens without a certificate
+  warning (apex HTTPS was confirmed working in Oct 2026).
 
 ## Other real facts learned since the initial build
 
