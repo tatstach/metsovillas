@@ -106,6 +106,14 @@ Settings → Pages). **Every change that should go live must be pushed to
 both** — push to the working branch, then
 `git push origin claude/metsovillas-website-planning-6sbvk8:main`.
 
+Every `/assets/css/*.css` and `/assets/js/*.js` link carries a `?v=YYYYMMDD`
+cache-buster. **Bump it on all pages whenever a CSS/JS file changes**, or
+visitors (and Tatiana, testing) keep seeing the old cached file for a while.
+
+Footer `.wrap` and `#mobileMenu` carry `data-nosnippet` so Google doesn't
+build search snippets out of nav labels and contact details. Keep it on
+any new page.
+
 ## Pending / not yet done
 
 - Verify `https://www.metsovillas.gr` serves without a certificate warning
